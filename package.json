@@ -35,7 +35,7 @@
     "typescript": "^4.0.0"
   },
   "dependencies": {
-    "@civ-clone/core-diplomacy": "^0.1.0",
+    "@civ-clone/core-diplomacy": "^0.1.9",
     "@civ-clone/core-player": "^0.1.0",
     "@civ-clone/core-rule": "^0.1.0",
     "@civ-clone/core-turn-based-game": "^0.1.0",
