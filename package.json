@@ -1,6 +1,7 @@
 {
   "name": "@civ-clone/base-diplomacy-interaction-contact",
   "version": "0.1.0",
+  "description": "The Contact interaction: two players have met, through their units or without any.",
   "repository": "git@github.com:civ-clone/base-diplomacy-interaction-contact.git",
   "keywords": [
     "typescript",
@@ -9,19 +10,35 @@
   "author": "dom111 <dom111@users.noreply.github.com>",
   "license": "MIT",
   "private": false,
+  "files": [
+    "*.ts",
+    "*.js",
+    "*.js.map",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "npm run ts:compile && npm run prettier:format",
-    "prettier:check": "prettier --config .prettierrc '**/*.ts'",
+    "prettier:check": "prettier --config .prettierrc --check '**/*.ts'",
     "prettier:format": "prettier --config .prettierrc '**/*.ts' --write",
+    "test": "ts-mocha ./tests/*.test.ts",
     "ts:compile": "tsc --build tsconfig.json"
   },
   "devDependencies": {
-    "prettier": "^2.1.2",
-    "typescript": "^4.0.3"
+    "@types/chai": "^4.0.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^16.0.0",
+    "chai": "^4.0.0",
+    "mocha": "^10.0.0",
+    "prettier": "^2.8.8",
+    "ts-mocha": "^10.0.0",
+    "typescript": "^4.0.0"
   },
   "dependencies": {
     "@civ-clone/core-diplomacy": "^0.1.0",
     "@civ-clone/core-player": "^0.1.0",
+    "@civ-clone/core-rule": "^0.1.0",
+    "@civ-clone/core-turn-based-game": "^0.1.0",
     "@civ-clone/core-unit": "^0.1.0"
   }
 }
