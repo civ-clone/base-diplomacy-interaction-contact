@@ -12,14 +12,11 @@ import Unit from '@civ-clone/core-unit/Unit';
 export class Contact extends Interaction {
   constructor(...args: (Unit | Player | RuleRegistry | Turn)[]) {
     super(
-      // Anything that isn't a player, a registry or a turn is a unit, as before players could be given: a unit from
-      //  another copy of core-unit still counts.
+      // A unit is anything with a `player()`, so a unit from another copy of core-unit still counts.
       ...args.map((arg): Player | RuleRegistry | Turn =>
-        arg instanceof Player ||
-        arg instanceof RuleRegistry ||
-        arg instanceof Turn
-          ? arg
-          : (arg as Unit).player()
+        typeof (arg as Unit).player === 'function'
+          ? (arg as Unit).player()
+          : (arg as Player | RuleRegistry | Turn)
       )
     );
   }
