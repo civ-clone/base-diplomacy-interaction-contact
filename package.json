@@ -1,6 +1,6 @@
 {
   "name": "@civ-clone/base-diplomacy-interaction-contact",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The Contact interaction: two players have met, through their units or without any.",
   "repository": "git@github.com:civ-clone/base-diplomacy-interaction-contact.git",
   "keywords": [
